@@ -23,6 +23,44 @@
 </head>
 <body>
 
+    <style>
+        /* --- Triple Crown Badges --- */
+        .triple-crown {
+          display:grid;
+          grid-template-columns:1fr;
+          gap:.75rem;
+        }
+        @media (min-width:768px){ .triple-crown{ grid-template-columns:repeat(3,1fr); } }
+      
+        .crown-card{
+          background:#fff;
+          border:1px solid #e9ecef;
+          border-radius:1rem;
+          padding:1rem 1.1rem;
+          display:flex; align-items:center; gap:.75rem;
+          box-shadow:0 .5rem 1.25rem rgba(0,0,0,.06);
+        }
+        .crown-ico{
+          width:44px;height:44px;border-radius:999px;
+          display:flex;align-items:center;justify-content:center;
+          background:#fff3cd; /* subtle gold */
+          border:1px solid #ffe69c;
+          font-size:1.25rem;
+        }
+        .crown-ttl{ font-weight:700; line-height:1.2; }
+        .crown-sub{ font-size:.82rem; color:#6c757d; }
+      
+        /* Ribbon headline */
+        .hero-ribbon{
+          display:inline-flex; align-items:center; gap:.5rem;
+          background:#0d6efd; color:#fff; padding:.4rem .75rem;
+          border-radius:.5rem;
+          font-size:.9rem; letter-spacing:.03em;
+        }
+        .hero-note{ font-size:.8rem; color:#6c757d; }
+      </style>
+      
+
 <!-- NAV -->
 <nav class="navbar navbar-expand-lg bg-white shadow-sm">
   <div class="container">
@@ -43,40 +81,67 @@
   </div>
 </nav>
 
-<!-- HERO / B2B -->
+<!-- HERO / Triple Crown -->
 <header class="hero py-5" id="forbiz">
-  <div class="container py-4">
-    <div class="row align-items-center g-4">
-      <div class="col-lg-6">
-        <span class="badge badge-usp text-white mb-3"><i class="bi bi-truck"></i> 倉庫保有・一気通関 ─ 最短即日出荷※／全国対応</span>
-        <h1 class="display-6 fw-bold">法人・業者さま向け <span class="text-primary">バレルサウナ</span></h1>
-        <p class="lead text-muted">
-          自社倉庫で在庫管理、通関〜配送まで一気通貫。ハウスメーカー・旅館/宿泊・キャンプ場・スポーツ施設（水風呂連携）・
-          別荘地開発の工務店（軽井沢等）に、テンポの良い導入をお約束します。
-        </p>
-        <div class="d-flex gap-2">
-          <a href="#contact" class="btn btn-primary btn-lg"><i class="bi bi-clipboard-check"></i> 法人見積・在庫確認</a>
-          <a href="#docs" class="btn btn-outline-secondary btn-lg"><i class="bi bi-filetype-pdf"></i> カタログDL</a>
+    <div class="container py-4">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <span class="hero-ribbon">
+            <i class="bi bi-lightning-charge"></i> 倉庫保有・一気通関／全国対応
+          </span>
+          <h1 class="display-6 fw-bold mt-3">
+            法人向け <span class="text-primary">バレルサウナ</span>で<br class="d-none d-md-inline">“導入の速さ”を、標準に。
+          </h1>
+          <p class="lead text-muted">
+            問い合わせ→配送→設置まで自社で一気通貫。現場スケジュールに合わせ、在庫即納＆全国配送でテンポ良く導入できます。
+          </p>
+  
+          <!-- Triple crown badges -->
+          <div class="triple-crown my-4">
+            <div class="crown-card">
+              <div class="crown-ico">👑</div>
+              <div>
+                <div class="crown-ttl">業界最安値</div>
+                <div class="crown-sub">※自社調べ／時期・仕様で変動</div>
+              </div>
+            </div>
+            <div class="crown-card">
+              <div class="crown-ico"><i class="bi bi-diagram-3"></i></div>
+              <div>
+                <div class="crown-ttl">問い合わせから配送・設置まで自社完結</div>
+                <div class="crown-sub">スピード・品質・責任、すべてワンストップで対応</div>
+              </div>
+            </div>
+            <div class="crown-card">
+              <div class="crown-ico"><i class="bi bi-truck"></i></div>
+              <div>
+                <div class="crown-ttl">全国配送・最短即日出荷</div>
+                <div class="crown-sub">※在庫・地域・道路状況により変動</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="d-flex gap-2">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <i class="bi bi-clipboard-check"></i> 法人見積・在庫確認
+            </a>
+            <a href="#docs" class="btn btn-outline-secondary btn-lg">
+              <i class="bi bi-filetype-pdf"></i> カタログDL
+            </a>
+          </div>
+          <small class="hero-note d-block mt-2">
+            ハウスメーカー／旅館・宿泊／キャンプ場／スポーツ施設（水風呂）／別荘地開発工務店（軽井沢等）に対応
+          </small>
         </div>
-        <small class="d-block text-muted mt-2">※在庫・地域で変動。離島は別途ご相談。</small>
-
-        <!-- industry chips -->
-        <div class="mt-4 d-flex flex-wrap gap-2" id="segments">
-          <span class="chip"><i class="bi bi-house-door"></i> ハウスメーカー</span>
-          <span class="chip"><i class="bi bi-building"></i> 旅館・宿泊</span>
-          <span class="chip"><i class="bi bi-tree"></i> キャンプ場</span>
-          <span class="chip"><i class="bi bi-trophy"></i> スポーツ施設（水風呂）</span>
-          <span class="chip"><i class="bi bi-hammer"></i> 別荘地開発工務店（軽井沢等）</span>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="ratio ratio-16x9 shadow-soft rounded bg-wood">
-          <img src="https://placehold.co/1200x675?text=Barrel+Sauna+%28B2B%29" class="w-100 h-100 object-fit-cover rounded" alt="バレルサウナ">
+  
+        <div class="col-lg-6">
+          <div class="ratio ratio-16x9 shadow-soft rounded bg-wood">
+            <img src="https://placehold.co/1200x675?text=Barrel+Sauna+B2B" class="w-100 h-100 object-fit-cover rounded" alt="バレルサウナ">
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
 <!-- INDUSTRY FIT / BENEFITS -->
 <section class="py-5 bg-light">
@@ -313,7 +378,7 @@
         <div class="card-body text-center">
           <div class="display-6 fw-bold">¥398,000〜</div>
           <p class="text-muted">最短即日出荷対象</p>
-          <a href="#contact" class="btn btn-outline-secondary w-100">法人在庫確認</a>
+          <!-- <a href="#contact" class="btn btn-outline-secondary w-100">見積・納期確認</a> -->
         </div></div>
       </div>
       <div class="col-md-4"><div class="card price-card pop h-100">
@@ -321,7 +386,7 @@
         <div class="card-body text-center">
           <div class="display-6 fw-bold">¥548,000〜</div>
           <p class="text-muted">選べるストーブ/断熱強化</p>
-          <a href="#contact" class="btn btn-primary w-100">見積・納期確認</a>
+          <!-- <a href="#contact" class="btn btn-primary w-100">見積・納期確認</a> -->
         </div></div>
       </div>
       <div class="col-md-4"><div class="card price-card h-100">
@@ -329,8 +394,14 @@
         <div class="card-body text-center">
           <div class="display-6 fw-bold">¥798,000〜</div>
           <p class="text-muted">施設向け導入支援あり</p>
-          <a href="#contact" class="btn btn-outline-secondary w-100">導入相談</a>
-        </div></div>
+          <!-- <a href="#contact" class="btn btn-outline-secondary w-100">導入相談</a> -->
+        </div>
+        </div>
+    </div>
+    <div class="text-center my-4">
+        <a href="#contact" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow">
+          資料請求はこちら
+        </a>
       </div>
     </div>
   </div>
@@ -365,7 +436,7 @@
   <div class="container">
     <div class="text-center mb-4">
       <div class="section-kicker">Documents</div>
-      <h2 class="fw-bold">ダウンロード資料</h2>
+      <h2 class="fw-bold">ダウンロード可能資料一覧</h2>
       <p class="text-muted">稟議・現場共有に使えるPDF一式（ダミーリンク）。</p>
     </div>
     <div class="row g-3">
@@ -391,6 +462,11 @@
             <h6 class="fw-bold"><i class="bi bi-journal-text me-1"></i> 稟議用1枚資料</h6>
             <div class="small text-muted">費用対効果・導入ステップ</div>
           </div>
+        </a>
+      </div>
+      <div class="text-center my-4">
+        <a href="#contact" class="btn btn-primary btn-lg px-4 py-2 rounded-pill shadow">
+          資料請求はこちら
         </a>
       </div>
     </div>
@@ -479,8 +555,28 @@
   <div class="container">
     <div class="row g-4">
       <div class="col-lg-6">
-        <h2 class="fw-bold mb-3">法人見積・在庫確認</h2>
-        <p class="text-muted">台数・納期・現場条件をご記入ください。営業日内にご連絡します。</p>
+        <h2 class="fw-bold mb-3">お問い合わせ</h2>
+        <p class="text-muted">資料請求、打ち合わせ希望はこちらをご記入ください。営業日内にご連絡します。</p>
+        <div class="mb-3">
+            <label class="form-label d-block">相談内容</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="check1" name="consult[]" value="資料ダウンロード">
+              <label class="form-check-label" for="check1">資料請求</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="check2" name="consult[]" value="面談希望">
+              <label class="form-check-label" for="check2">打ち合わせ希望</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="check3" name="consult[]" value="ご質問">
+              <label class="form-check-label" for="check3">ご質問</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="check4" name="consult[]" value="その他">
+              <label class="form-check-label" for="check4">その他</label>
+            </div>
+          </div>
+          
         <form class="needs-validation" novalidate>
           <div class="row g-3">
             <div class="col-md-6">
