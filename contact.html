@@ -65,12 +65,15 @@
       <div class="small-note">ご入力内容を確認後、採用担当よりご連絡いたします。<br class="d-none d-md-inline">※<span class="text-danger">*</span>は必須項目です。</div>
     </div>
 
-    <form action="#" method="post" class="card card-form p-3 p-md-4">
+    <!-- 本番 -->
+    <!-- <form action="https://formspree.io/f/xgvnyqdy" method="post" class="card card-form p-3 p-md-4"> --->
+    <!-- <form action="https://formspree.io/f/xovdgbaz" method="post" class="card card-form p-3 p-md-4"> --->
+    <form id="applyForm" action="https://formspree.io/f/xovdgbaz" method="post" class="card card-form p-3 p-md-4">
 
       <!-- メール -->
       <div class="mb-3">
         <label class="form-label">メールアドレス <span class="asterisk">*</span></label>
-        <input type="email" class="form-control" name="email" required placeholder="例）example@email.com">
+        <input type="email" class="form-control" name="メールアドレス" required placeholder="例）example@email.com">
       </div>
 
       <div class="form-divider"></div>
@@ -81,13 +84,10 @@
           【重要】土日祝除いて3日経っても返答メールが届かない場合は貴方様のメールが拒否していることが原因です。弊社フードクリエイティブファクトリーまたはtoroaのホームページで問い合わせフォームよりご連絡をお願いします
           <span class="asterisk">*</span>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="isAgree" id="isAgree" value="yes" required>
-                <label class="form-check-label" for="isAgree">了解です。返答が届かない場合は問い合わせフォームを使います
-</label>
+                <input class="form-check-input" type="radio" name="土日祝除いて3日経っても返答メールが届かない場合は貴方様のメールが拒否していることが原因です。弊社フードクリエイティブファクトリーまたはtoroaのホームページで問い合わせフォームよりご連絡をお願いします" id="isAgree" value="yes" required>
+                <label class="form-check-label" for="isAgree">了解です。返答が届かない場合は問い合わせフォームを使います</label>
           </div>
         </div>
-
-
       </div>
 
       <div class="form-divider"></div>
@@ -98,26 +98,26 @@
         <div class="row">
           <div class="col-12 col-sm-6">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="ref[]" value="Twitter/X" id="ref1">
+              <input class="form-check-input" type="checkbox" name="note記事を何で知ったか？[]" value="Twitter/X" id="ref1">
               <label class="form-check-label" for="ref1">Twitterから</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="ref[]" value="Instagram" id="ref2">
+              <input class="form-check-input" type="checkbox" name="note記事を何で知ったか？[]" value="Instagram" id="ref2">
               <label class="form-check-label" for="ref2">Instagramから</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="ref[]" value="Facebook" id="ref3">
+              <input class="form-check-input" type="checkbox" name="note記事を何で知ったか？[]" value="Facebook" id="ref3">
               <label class="form-check-label" for="ref3">Facebookから</label>
             </div>
           </div>
           <div class="col-12 col-sm-6">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="ref[]" value="知人の紹介" id="ref4">
+              <input class="form-check-input" type="checkbox" name="note記事を何で知ったか？[]" value="noteをフォローしてるorメールなどで通知が届く" id="ref4">
               <label class="form-check-label" for="ref4">noteをフォローしてるorメールなどで通知が届く</label>
             </div>
             <div class="input-group input-group-sm mt-2">
               <span class="input-group-text">その他</span>
-              <input type="text" class="form-control" name="ref_other" placeholder="媒体名など">
+              <input type="text" class="form-control" name="note記事を何で知ったか？その他" placeholder="媒体名など">
             </div>
           </div>
         </div>
@@ -130,11 +130,11 @@
         <label class="form-label">希望雇用形態 <span class="asterisk">*</span></label>
         <div class="choice-block">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="employment_type" id="ft" value="正社員" required>
+            <input class="form-check-input" type="radio" name="希望雇用形態" id="ft" value="正社員" required>
             <label class="form-check-label" for="ft">正社員</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="employment_type" id="pt" value="パートタイム" required>
+            <input class="form-check-input" type="radio" name="希望雇用形態" id="pt" value="パートタイム" required>
             <label class="form-check-label" for="pt">パートタイム</label>
           </div>
         </div>
@@ -150,7 +150,7 @@
       <!-- PTの可働時間 -->
       <div class="mb-3">
         <label class="form-label">【パートタイム希望の方】勤務可能日と時間帯</label>
-        <textarea class="form-control" name="pt_available" rows="2" placeholder=""></textarea>
+        <textarea class="form-control" name="パート希望勤務日時" rows="2" placeholder=""></textarea>
       </div>
 
       <div class="form-divider"></div>
@@ -160,19 +160,19 @@
         <label class="form-label">可能な勤務頻度</label>
         <div class="choice-block">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="followup" id="follow1" value="週5">
+            <input class="form-check-input" type="radio" name="可能な勤務頻度" id="follow1" value="週5">
             <label class="form-check-label" for="follow1">週5</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="followup" id="follow2" value="週4">
+            <input class="form-check-input" type="radio" name="可能な勤務頻度" id="follow2" value="週4">
             <label class="form-check-label" for="follow2">週4</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="followup" id="follow3" value="週3">
+            <input class="form-check-input" type="radio" name="可能な勤務頻度" id="follow3" value="週3">
             <label class="form-check-label" for="follow3">週3</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="followup" id="follow4" value="週2以下">
+            <input class="form-check-input" type="radio" name="可能な勤務頻度" id="follow4" value="週2以下">
             <label class="form-check-label" for="follow3">週2以下</label>
           </div>
         </div>
@@ -185,12 +185,12 @@
         <label class="form-label">所得103万円以内が必須の方</label>
         <div class="choice-block">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="is103" id="yes" value="no">
-            <label class="form-check-label" for="yes">必須ではない</label>
+            <input class="form-check-input" type="radio" name="所得103万位ないが必須か" id="no" value="必須ではない">
+            <label class="form-check-label" for="no">必須ではない</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="is103" id="no" value="yes">
-            <label class="form-check-label" for="no">必須</label>
+            <input class="form-check-input" type="radio" name="所得103万位ないが必須か" id="yes" value="必須">
+            <label class="form-check-label" for="yes">必須</label>
           </div>
         </div>
       </div>
@@ -201,62 +201,62 @@
     <div class="row g-3">
         <div class="col-12 col-md-6">
         <label class="form-label">氏名 <span class="asterisk">*</span></label>
-        <input type="text" class="form-control" name="name" required placeholder="例）山田 太郎">
+        <input type="text" class="form-control" name="氏名" required placeholder="例）山田 太郎">
         </div>
 
         <div class="col-12">
         <label class="form-label">郵便番号<span class="asterisk">*</span></label>
-        <input type="text" class="form-control" name="zipcode" placeholder="例）123-4567">
+        <input type="text" class="form-control" name="郵便番号" placeholder="例）123-4567">
         </div>
 
         <div class="col-12">
         <label class="form-label">住所<span class="asterisk">*</span></label>
-        <input type="text" class="form-control" name="address" placeholder="例）大阪府大阪市〇〇区〇〇1-2-3">
+        <input type="text" class="form-control" name="住所" placeholder="例）大阪府大阪市〇〇区〇〇1-2-3">
         </div>
 
         <div class="col-12 col-md-6">
         <label class="form-label">電話番号（日中連絡が取れる番号）<span class="asterisk">*</span></label>
-        <input type="tel" class="form-control" name="tel" required placeholder="例）090-1234-5678">
+        <input type="tel" class="form-control" name="電話番号" required placeholder="例）090-1234-5678">
         </div>
 
         <div class="col-12 col-md-6">
         <label class="form-label">生年月日 <span class="asterisk">*</span></label>
-        <input type="date" class="form-control" name="birth" required>
+        <input type="date" class="form-control" name="生年月日" required>
         </div>
 
         <div class="col-12 col-md-4">
         <label class="form-label">年齢</label>
-        <input type="number" class="form-control" name="age" min="15" max="80" placeholder="例）28">
+        <input type="number" class="form-control" name="年齢" min="15" max="80" placeholder="例）28">
         </div>
 
         <div class="col-12">
         <label class="form-label">略歴（学歴） <span class="asterisk">*</span></label>
-        <textarea class="form-control" name="education" rows="2" placeholder="最終学歴・学校名・専攻など"></textarea>
+        <textarea class="form-control" name="学歴" rows="2" placeholder="最終学歴・学校名・専攻など"></textarea>
         </div>
 
         <div class="col-12">
         <label class="form-label">略歴（社員・パート含む）<span class="asterisk">*</span></label>
-        <textarea class="form-control" name="career" rows="3" placeholder="勤務先・職種・期間など"></textarea>
+        <textarea class="form-control" name="職歴" rows="3" placeholder="勤務先・職種・期間など"></textarea>
         </div>
 
         <div class="col-12">
         <label class="form-label">共有可能なSNSアカウント</label>
-        <input type="text" class="form-control" name="sns" placeholder="例）@example_instagram">
+        <input type="text" class="form-control" name="snsアカウント" placeholder="例）@example_instagram">
         </div>
 
         <div class="col-12">
         <label class="form-label">応募に至った考え・自己PR（経験・スキル・趣味・実績など）<span class="asterisk">*</span></label>
-        <textarea class="form-control" name="motivation" rows="4" placeholder="志望理由や自己PRをご記入ください"></textarea>
+        <textarea class="form-control" name="自己PR" rows="4" placeholder="志望理由や自己PRをご記入ください"></textarea>
         </div>
 
         <div class="col-12 col-md-6">
         <label class="form-label">面接可能な候補日（3〜5日）</label>
-        <textarea class="form-control" name="interview_dates" rows="2" placeholder="例）10/10 午後、10/12 午前、10/13 終日など"></textarea>
+        <textarea class="form-control" name="面接可能日" rows="2" placeholder="例）10/10 午後、10/12 午前、10/13 終日など"></textarea>
         </div>
 
         <div class="col-12 col-md-6">
         <label class="form-label">最短で勤務可能な日</label>
-        <input type="date" class="form-control" name="available_date">
+        <input type="date" class="form-control" name="最短で勤務可能な日">
         </div>
     </div>
     </div>
@@ -277,5 +277,41 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- スプレッドシートに送るよう -->
+  <script>
+  // ★ここにあなたのGASのWebアプリURLを入れてください
+  const GAS_URL = "https://script.google.com/macros/s/AKfycbyHl6y4TRSIsBcR5-6yHilUvHUDxGWwqL4tOMKtPG96XNTiSv5GnTxpMRJ9fYWIiDURQQ/exec";
+
+  // Form送信時に、同じ内容をGASへも送る（Formspree送信はそのまま継続）
+  document.getElementById('applyForm').addEventListener('submit', function (e) {
+    try {
+      const form = e.target;
+
+      // 追加情報（UA/リファラ）をhiddenで付与
+      const ua = document.createElement('input');
+      ua.type = 'hidden'; ua.name = 'userAgent'; ua.value = navigator.userAgent;
+      form.appendChild(ua);
+
+      const rf = document.createElement('input');
+      rf.type = 'hidden'; rf.name = 'referrer'; rf.value = document.referrer || '';
+      form.appendChild(rf);
+
+      const fd = new FormData(form);
+
+      // 可能なら sendBeacon（URLエンコード）／fallbackはno-cors fetch
+      if (navigator.sendBeacon) {
+        const usp = new URLSearchParams();
+        for (const [k, v] of fd.entries()) usp.append(k, v);
+        const blob = new Blob([usp.toString()], { type: 'application/x-www-form-urlencoded' });
+        navigator.sendBeacon(GAS_URL, blob);
+      } else {
+        fetch(GAS_URL, { method: 'POST', body: fd, mode: 'no-cors' });
+      }
+    } catch (err) {
+      console.warn('GAS送信でエラー（Formspree送信は継続します）:', err);
+    }
+    // ※ preventDefaultしない＝通常どおりFormspreeへ遷移・送信
+  });
+</script>
 </body>
 </html>
