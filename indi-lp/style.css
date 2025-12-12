@@ -321,3 +321,42 @@ body {
     gap: 16px;
   }
 }
+
+
+/*  */
+/* ボタン2つの並びをレスポンシブ化 */
+.mini-cta-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;   /* PCは中央寄せ */
+  align-items: center;
+}
+
+/* ボタン共通（既存は活かしつつ、崩れないよう調整） */
+.mini-pill-btn{
+  max-width: 100%;
+}
+
+/* SP：縦並び・幅100%・文字小さめ */
+@media (max-width: 767.98px){
+  .mini-cta-buttons{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .mini-pill-btn{
+    width: 100%;
+    padding: 14px 18px;      /* 横がはみ出るの防止 */
+    font-size: 18px;         /* 24pxだとSPでデカいので縮小 */
+    white-space: normal;      /* 折り返し許可（はみ出し防止） */
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+  }
+}
+
+/* PC：横並び・横幅は内容に合わせる（必要なら） */
+@media (min-width: 768px){
+  .mini-pill-btn{
+    width: auto;
+  }
+}
