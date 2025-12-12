@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>サウナ本舗KOHALU</title>
+
+    <!-- Google Fonts: Noto Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <meta name="google-site-verification" content="l3-COkuO0zzzJKJj9z97RzaqO_JNQ2ZnwxtrTujfaCU" />
+</head>
+<body>
+<main>
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-2">
+      <div class="container">
+        <!-- ロゴ -->
+        <a class="navbar-brand" href="#">
+          サウナ本舗KOHALU
+        </a>
+
+        <!-- トグル（スマホ用） -->
+         <!-- TODO -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav" aria-controls="mainNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- メニュー -->
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#reason">なぜサウナ本舗KOHALU？</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#product">商材</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#delivery">配送・設置</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">無料現調</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+          </ul>
+
+          <!-- お問い合わせボタン -->
+          <a href="#contact" class="btn btn-koharu ms-lg-3 mb-2 mb-lg-0">
+            お問い合わせ
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 2_FV_1 -->
+     <!-- KOHALU ヒーローセクション -->
+     <!-- TODO: pcサイズを変えた時の表示崩れ、ボタンの左ずれ -->
+      <section class="hero-kohalu d-flex align-items-end">
+        <div class="container pb-5">
+          <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
+            <a href="#contact" class="btn btn-hero-primary">
+              無料現調を申し込む →
+            </a>
+            <a href="#reason" class="btn btn-hero-secondary">
+              1分でわかるKOHALU →
+            </a>
+          </div>
+        </div>
+      </section>
+
+    <!-- 2_FV_2 -->
+    <section class="FV2-section">
+        <!-- スマホサイズなし -->
+        <img src="2_FV_2.png" class="img-fluid w-100 d-block" alt="">
+    </section>
+
+    <!-- 3_point -->
+    <section class="FV2-section">
+      <picture>
+        <!-- スマホ用 -->
+        <source srcset="3_point_1_sp.png" media="(max-width: 767.98px)">
+        <!-- PC・タブレット用 -->
+        <img src="3_point_1.jpg" class="img-fluid w-100 d-block" alt="">
+      </picture>
+    </section>
+
+
+    <!-- 3_reasosn -->
+    <!-- 「なぜサウナ本舗KOHALUなのか」 -->
+      <section class="reason-section py-5" id="reason">
+        <div class="container">
+
+          <!-- =======================
+              PC（md以上）
+              1段目：3_reason_1.png
+              2段目：YouTube(左) / 3_reason_2.png(右)
+          ======================== -->
+          <div class="d-none d-md-block">
+            <!-- 1段目 -->
+            <div class="mb-4">
+              <img src="3_reason_1.png" class="img-fluid w-100" alt="理由画像1" loading="lazy">
+            </div>
+
+            <!-- 2段目 -->
+            <div class="row g-4 align-items-center">
+              <div class="col-md-6">
+                <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
+                  <iframe
+                    src="https://www.youtube.com/watch?v=PIsdulrF8Xg"
+                    title="YouTube"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <img src="3_reason_2.png" class="img-fluid w-100" alt="理由画像2" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- =======================
+              SP（md未満）
+              1段目：3_reason_2_sp.png
+              2段目：YouTube
+              3段目：3_reason_3_sp.png
+          ======================== -->
+          <div class="d-block d-md-none">
+            <!-- 1段目 -->
+            <div class="mb-3">
+              <img src="3_reason_2_sp.png" class="img-fluid w-100" alt="理由SP画像1" loading="lazy">
+            </div>
+
+            <!-- 2段目 -->
+            <div class="mb-3">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/oDWFfFyuno4?start=1"
+                  title="YouTube"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- 3段目 -->
+            <div>
+              <img src="3_reason_3_sp.png" class="img-fluid w-100" alt="理由SP画像2" loading="lazy">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    
+    <!--「商材ラインナップ」  -->
+    <!-- 4_lineup.jpg -->
+    <section class="img-block" id="product">
+        <!-- <picture>
+            <source srcset="4_lineup_sp.png" media="(max-width: 768px)">
+            <img src="4_lineup.png" alt="製品ラインナップ" loading="lazy">
+        </picture> -->
+
+        <!-- バレルサウナ 屋内用 -->
+        <picture>
+            <source srcset="4_lineup_1_sp.png" media="(max-width: 767.98px)">
+            <img src="4_lineup_1.png" class="img-fluid w-100 d-block" alt="">
+        </picture>
+        <!-- ボタンエリア -->
+        <div class="mini-cta-buttons">
+          <a href="#contact" class="mini-pill-btn mini-pill-btn--yellow">
+            このタイプで相談 →
+          </a>
+          <a href="#image" class="mini-pill-btn mini-pill-btn--brown">
+            設置イメージを見る →
+          </a>
+        </div>
+
+
+        <!-- バレルサウナ 屋外用 -->
+        <picture>
+            <source srcset="4_lineup_1_sp.png" media="(max-width: 767.98px)">
+            <img src="4_lineup_1.png" class="img-fluid w-100 d-block" alt="">
+        </picture>
+        <!-- ボタンエリア -->
+        <div class="mini-cta-buttons">
+          <a href="#contact" class="mini-pill-btn mini-pill-btn--yellow">
+            このタイプで相談 →
+          </a>
+          <a href="#image" class="mini-pill-btn mini-pill-btn--brown">
+            設置イメージを見る →
+          </a>
+        </div>
+
+        
+        <!-- 水風呂 -->
+        <picture>
+            <source srcset="4_lineup_4_sp.png" media="(max-width: 767.98px)">
+            <img src="4_lineup_4.png" class="img-fluid w-100 d-block" alt="">
+        </picture>
+
+    </section>
+    
+     <!-- 6_配送・設置について -->
+    <section id="delivery" class="FV2-section py-5">
+      <!-- PC / タブレット：2枚構成 -->
+      <div class="d-none d-md-block">
+        <img src="6_配送と設置.png" class="img-fluid w-100 d-block" alt="">
+        <img src="6_tel.png" class="img-fluid w-100 d-block" alt="">
+      </div>
+
+      <!-- スマホ：sp版1枚 -->
+      <picture class="d-block d-md-none">
+        <source srcset="6_配送と設置_sp.png" media="(max-width: 767.98px)">
+        <img src="6_配送と設置_sp.png" class="img-fluid w-100 d-block" alt="">
+      </picture>
+    </section>
+
+    
+    <!-- 7_設置の不安について -->
+    <section class="FV2-section py-5">
+      <picture>
+        <!-- スマホ用（sp版があるならここを差し替え） -->
+        <source srcset="7_設置の不安_sp.png" media="(max-width: 767.98px)">
+        <!-- PC・タブレット用 -->
+        <img src="7_設置の不安.png" class="img-fluid w-100 d-block" alt="">
+      </picture>
+    </section>
+
+
+    <!-- 8_品質 -->
+    <section class="FV2-section">
+      <picture>
+        <!-- スマホ用 -->
+        <source srcset="8_品質_sp.png" media="(max-width: 767.98px)">
+        <!-- PC・タブレット用 -->
+        <img src="8_品質.png" class="img-fluid w-100 d-block" alt="">
+      </picture>
+    </section>
+
+
+    <!-- 9_設置イメージ -->
+    <section id="image" class="FV2-section">
+      <picture>
+        <!-- スマホ用 -->
+        <source srcset="9_設置イメージ_sp.png" media="(max-width: 767.98px)">
+        <!-- PC・タブレット用 -->
+        <img src="9_設置イメージ.png" class="img-fluid w-100 d-block" alt="">
+      </picture>
+    </section>
+
+
+    <!-- 10_よくある質問 -->
+    <section id="faq" class="FV2-section">
+      <picture>
+        <!-- スマホ用 -->
+        <source srcset="10_よくある質問_sp.png" media="(max-width: 767.98px)">
+        <!-- PC・タブレット用 -->
+        <img src="10_よくある質問.png" class="img-fluid w-100 d-block" alt="">
+      </picture>
+    </section>
+
+
+    <!-- 11_資料請求 -->
+    <section id="contact" class="FV2-section">
+      <picture>
+        <!-- スマホ用 -->
+        <source srcset="11_資料請求_sp.png" media="(max-width: 767.98px)">
+        <!-- PC・タブレット用 -->
+        <img src="11_資料請求.png" class="img-fluid w-100 d-block" alt="">
+      </picture>
+
+        <!-- フォーム -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-card mx-auto p-4 p-md-5">
+                <form>
+
+                    <div class="row g-4">
+                    <!-- お名前 -->
+                    <div class="col-12 col-md-6">
+                        <label class="form-label">お名前</label>
+                        <input type="text" class="form-control" placeholder="山田　太郎">
+                    </div>
+
+                    <!-- 電話番号 -->
+                    <div class="col-12 col-md-6">
+                        <label class="form-label">電話番号</label>
+                        <input type="tel" class="form-control" placeholder="090-1234-5678">
+                    </div>
+
+                    <!-- メールアドレス -->
+                    <div class="col-12 col-md-6">
+                        <label class="form-label">メールアドレス</label>
+                        <input type="email" class="form-control" placeholder="example@example.com">
+                    </div>
+
+                    <!-- 都道府県 -->
+                    <div class="col-12 col-md-6">
+                        <label class="form-label">都道府県</label>
+                        <select class="form-select">
+                        <option selected>選択してください</option>
+                        <option>北海道</option>
+                        <option>青森県</option>
+                        <!-- 省略：都道府県ここに並べる -->
+                        </select>
+                    </div>
+
+                    <!-- 建物タイプ -->
+                    <div class="col-12 col-md-6">
+                        <label class="form-label">建物タイプ</label>
+                        <select class="form-select">
+                        <option selected>選択してください</option>
+                        <option>戸建て</option>
+                        <option>マンション</option>
+                        <option>店舗</option>
+                        <option>その他</option>
+                        </select>
+                    </div>
+
+                    <!-- ご希望モデル -->
+                    <div class="col-12 col-md-6">
+                        <label class="form-label">ご希望モデル</label>
+                        <select class="form-select">
+                        <option selected>未定（相談したい）</option>
+                        <option>KOHARU Aタイプ</option>
+                        <option>KOHARU Bタイプ</option>
+                        <option>その他</option>
+                        </select>
+                    </div>
+
+                    <!-- ご要望 -->
+                    <div class="col-12">
+                        <label class="form-label">ご要望・現状（任意）</label>
+                        <textarea class="form-control" rows="4"
+                        placeholder="例：〇月中に設置希望／電源容量不明／集合住宅管理規約の確認が必要 など"></textarea>
+                    </div>
+                    </div>
+
+                    <!-- ボタン行 -->
+                    <div class="mt-4 mt-md-5 d-flex flex-column flex-md-row gap-3">
+                    <!-- 左：無料現調 -->
+                    <button type="submit"
+                            class="btn-contact btn-contact-primary flex-fill">
+                        無料現調を申し込む →
+                    </button>
+
+                    <!-- 右：電話で相談 -->
+                    <a href="tel:09063022463"
+                        class="btn-contact btn-contact-secondary flex-fill text-center">
+                        電話で相談 →
+                    </a>
+                    </div>
+
+                    <!-- 注意書き -->
+                    <p class="contact-note mt-3 mb-0 small text-center text-md-start">
+                    ※ 送信後、担当より1営業日以内にご連絡します。
+                    </p>
+
+                </form>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer-kohalu py-5">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <!-- 左：ロゴ/説明 -->
+          <div class="col-md-5">
+            <div class="footer-brand fw-bold mb-2">サウナ本舗 KOHALU</div>
+            <p class="footer-lead mb-2">
+              配送から設置までワンストップ。まずは無料現調からお気軽にご相談ください。
+            </p>
+            <small class="footer-copy">©Sauna Honpo KOHALU</small>
+          </div>
+        </div>
+
+        <hr class="footer-divider my-5">
+
+        <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
+          <small class="footer-note"></small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- スティッキーバナー -->
+    <section class="sticky-cta py-3">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+            <!-- 左：電話ボタン -->
+            <a href="tel:09063022463"
+                class="btn-cta btn-cta-phone d-flex align-items-center justify-content-center flex-fill">
+                <span class="me-2">📞</span>
+                <div class="text-center">
+                <div class="small fw-bold">お電話で問い合わせ</div>
+                <div class="fs-5 fw-bold">090-6302-2463</div>
+                </div>
+            </a>
+
+            <!-- 右：資料請求ボタン -->
+            <a href="#contact"
+                class="btn-cta btn-cta-doc d-flex align-items-center justify-content-center flex-fill">
+                <span class="fw-bold">資料請求はこちら</span>
+                <span class="ms-2">→</span>
+            </a>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- LinkedIn広告のInsightタグ -->
+  <script type="text/javascript">
+    _linkedin_partner_id = "8354436";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script><script type="text/javascript">
+    (function(l) {
+    if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+    window.lintrk.q=[]}
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);})(window.lintrk);
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=8354436&fmt=gif" />
+  </noscript>
+</body>
+</html>
