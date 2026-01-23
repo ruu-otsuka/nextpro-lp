@@ -111,7 +111,7 @@
   }
   </script>
 
-      <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16693324161"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -120,7 +120,17 @@
     
       gtag('config', 'AW-16693324161');
     </script>
-  
+    <!-- Event snippet for 個人向けform送信完了 conversion page -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        if (window.location.href.includes("/nextpro-lp/indi-lp/for-individual.html")) {
+           var submitButton = document.querySelector('[type="submit"]');
+            submitButton.onclick = function () {
+            gtag('event', 'conversion', {'send_to': 'AW-16693324161/oiOjCObgk-obEIHT_5c-'});
+            };
+        }
+    });
+    </script>
 </head>
 <body>
   <!-- Sticky top nav -->
