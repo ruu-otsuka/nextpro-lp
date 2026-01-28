@@ -1,353 +1,362 @@
-
-:root{
-  --nav-bg: #1b1716;
-  --nav-text: #e9e3df;
-  --nav-text-dim: #cfc6c0;
-  --brand-size: 1.05rem;
-  --item-size: .95rem;
-  --footer-bg: #221c1b;   /* 画像に近い深いブラウン/ブラック */
-  --footer-fg: #efece9;   /* 白すぎないアイボリー寄りの白 */
-     --card-radius: 14px;
-      --card-shadow: 0 12px 30px rgba(0,0,0,.18);
-      --accent: #b81f1f;
-}
+/* 追加 or 修正 */
 body {
-  font-family: "Shippori Mincho", serif;
-  padding-top: 64px;
-  background: #000;
+  font-family: 'Noto Sans JP', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #3A2616;
 }
-.navbar{
-  background: var(--nav-bg) !important;
-  border-bottom: 1px solid rgba(255,255,255,.06);
-}
-.navbar .navbar-brand{
-  color: var(--nav-text);
+
+.navbar-brand {
   font-weight: 700;
-  font-size: var(--brand-size);
-  letter-spacing: .06em;
-}
-.navbar .navbar-brand:hover{ color: #fff; }
-
-.navbar .nav-link{
-  color: var(--nav-text-dim);
-  font-size: var(--item-size);
-  letter-spacing: .08em;
-  padding-left: 1.0rem !important;
-  padding-right: 1.0rem !important;
-  transition: color .2s ease, opacity .2s ease;
-}
-.navbar .nav-link:hover,
-.navbar .nav-link:focus{
-  color: var(--nav-text);
-  text-decoration: none;
+  letter-spacing: .05em;
+  color: #3A2616 !important;
 }
 
-/* ボタン画像 */
-.btn-estimate-img img {
-  height: 36px; /* 画像サイズ調整 */
-  width: auto;
-  display: block;
+.navbar-nav .nav-link {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 0.95rem;
+  color: #3A2616 !important;
 }
 
-.btn-estimate-img:hover img {
-  filter: brightness(1.05);
-  transform: translateY(-1px);
-  transition: all 0.2s ease;
+/*  */
+/* ヒーロー全体 */
+/*  */
+.hero-kohalu{
+  width: 100%;
+  min-height: clamp(420px, 70vh, 760px);
+  background: url("2_FV_1.png") center center / cover no-repeat;
+  position: relative;
 }
 
-.navbar-toggler{
-  border-color: rgba(255,255,255,.25);
-}
-.navbar-toggler:focus{ box-shadow: 0 0 0 .1rem rgba(255,255,255,.25); }
-.navbar-dark .navbar-toggler-icon{
-  filter: invert(1) grayscale(100%);
-  opacity: .85;
-}
-.navbar .container{ min-height: 56px; }
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='red' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+/* スマホで少し間隔調整したい場合 */
+@media (max-width: 576px) {
+  .hero-kohalu{
+    width: 100%;
+    min-height: clamp(420px, 70vh, 760px);
+    background: url("2_FV_1_sp.png") center center / cover no-repeat;
+    position: relative;
+  }
 }
 
-/* index.html⇧ */
 
-/* index2.html */
-    .img-block {
-      /* margin-bottom: var(--section-gap); */
-      /* border-radius: 10px; */
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,.08);
-      background: #fff;
-    }
-    .img-block img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    .page-container {
-      max-width: 1200px;
-    }
-    /* 余白を少しコンパクトにしたい場合は調整 */
-    @media (min-width: 992px) {
-      :root { --section-gap: 32px; }
-    }
-
-    .site-footer {
-  background-color: var(--footer-bg);
-  color: var(--footer-fg);
-  letter-spacing: 0.02em;
+/* 下部の文字/ボタンが読みやすいように薄いグラデ */
+.hero-kohalu::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0) 60%);
 }
 
-/* footer */
-.footer-brand {
-  font-family: "Shippori Mincho", serif; /* フォント指定（任意） */
-  font-size: 1.25rem; /* 画像に近いサイズ感 */
-  margin-bottom: 0.8rem;
+.hero-kohalu > .container{
+  position: relative;
+  z-index: 1;
 }
 
-.footer-links {
-  display: flex;
+/* ボタン共通 */
+.hero-kohalu .btn-hero-primary,
+.hero-kohalu .btn-hero-secondary{
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 0.9rem 1.2rem;
+  text-align: center;
+  width: 100%;          /* SPは横幅いっぱい */
+}
+
+/* PCでは幅auto */
+@media (min-width: 768px){
+  .hero-kohalu .btn-hero-primary,
+  .hero-kohalu .btn-hero-secondary{
+    width: auto;
+    min-width: 260px;   /* お好みで */
+  }
+}
+
+/* 色指定 */
+.hero-kohalu .btn-hero-primary{
+  background: #3A2616;
+  border: 1px solid #3A2616;
+  color: #fff;
+}
+
+.hero-kohalu .btn-hero-secondary{
+  background: rgba(255,255,255,.92);
+  border: 1px solid #3A2616;
+  color: #3A2616;
+}
+
+/* hover */
+.hero-kohalu .btn-hero-primary:hover{ opacity: .92; }
+.hero-kohalu .btn-hero-secondary:hover{ opacity: .92; }
+
+/* after fix botton */
+:root{
+  --kohalu-gold:#F2C94D; /* スクショの色 */
+  --kohalu-brown:#3A2616;
+}
+
+.hero-kohalu .btn-hero-primary,
+.hero-kohalu .btn-hero-secondary{
+  border-radius: 9999px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  padding: 18px 42px;
+  font-size: 20px;
+  line-height: 1;
+  width: 100%;              /* SPは横幅いっぱい */
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 0.98rem;
-}
-
-.footer-links .sep {
-  opacity: 0.85;
-}
-
-.site-footer a {
-  color: var(--footer-fg);
+  justify-content: center;
+  gap: 10px;
   text-decoration: none;
 }
 
-.site-footer a:hover {
-  text-decoration: underline;
+@media (min-width: 768px){
+  .hero-kohalu .btn-hero-primary,
+  .hero-kohalu .btn-hero-secondary{
+    width: auto;
+    min-width: 360px;        /* スクショの横長感 */
+  }
 }
 
-.footer-copy {
-  color: var(--footer-fg);
+/* 左：塗り */
+.hero-kohalu .btn-hero-primary{
+  background: var(--kohalu-gold);
+  border: 2px solid var(--kohalu-gold);
+  color: var(--kohalu-brown);
+  box-shadow: 0 10px 22px rgba(0,0,0,.28);
+}
+
+/* 右：アウトライン */
+.hero-kohalu .btn-hero-secondary{
+  background: transparent;
+  border: 2px solid var(--kohalu-gold);
+  color: var(--kohalu-gold);
+}
+
+
+/* <!-- 3_reasosn -->
+<!-- 「なぜサウナ本舗KOHALUなのか」 --> */
+.reason-section{
+  background: #E7E1D7;
+}
+
+/*  */
+/* 3_point */
+/*  */
+.FV2-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;   /* 余白いらなければ */
+}
+
+.FV2-section img {
+  object-fit: cover; /* 必要なら：縦横比維持しつつカバー */
+}
+
+
+
+/* 資料請求 */
+/* セクション背景（外側のベージュ） */
+.contact-section {
+  background-color: #E3DCCE; /* 好きなベージュに調整してOK */
+}
+
+/* 白いカード部分 */
+.contact-card {
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ラベル */
+.contact-card .form-label {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+/* インプット・セレクト共通 */
+.contact-card .form-control,
+.contact-card .form-select {
+  border-radius: 6px;
+  border-color: #d7cbb7;
+  font-size: 0.95rem;
+}
+
+/* テキストエリア */
+.contact-card textarea.form-control {
+  resize: vertical;
+}
+
+/* ボタン共通（角丸＋影） */
+.btn-contact {
+  border-radius: 999px;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: 700;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  text-decoration: none;
+}
+
+/* 左ボタン：黄色 */
+.btn-contact-primary {
+  background-color: #f6c94a;
+  color: #3c3220;
+}
+
+/* 右ボタン：緑 */
+.btn-contact-secondary {
+  background-color: #2d6b43;
+  color: #ffffff;
+}
+
+/* ボタンのテキスト折り返し対策 */
+.btn-contact {
+  white-space: nowrap;
+}
+
+/* SP時はフォーム全体を少しゆったり */
+@media (max-width: 767.98px) {
+  .contact-card {
+    border-radius: 16px;
+  }
+  .btn-contact {
+    width: 100%;
+  }
+}
+
+
+/* スティッキーバナー */
+/* 画面下に固定されるスティッキーバナー */
+.sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1030; /* ナビより上に出したい場合は調整 */
+  background-color: #3c3220; /* 背景の茶色 */
+}
+
+/* ボタン共通 */
+.sticky-cta .btn-cta {
+  border-radius: 999px;
+  padding: 0.7rem 2.5rem;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* 左の黄色ボタン */
+.sticky-cta .btn-cta-phone {
+  background-color: #f7c94a;
+  color: #3c3220;
+}
+
+/* 右の緑ボタン */
+.sticky-cta .btn-cta-doc {
+  background-color: #2d6b43;
+  color: #ffffff;
+}
+
+/* モバイル時は縦並びに */
+@media (max-width: 767.98px) {
+  .sticky-cta .btn-cta {
+    width: 100%;
+  }
+}
+
+/* 商材ラインナップ ボタン */
+/* 全体のフォント（必要なら） */
+body {
+  font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* 横並び＆中央寄せ */
+.mini-cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px; /* ボタン同士の間隔 */
+  padding: 15px 0;
+}
+
+/* 共通ボタン */
+.mini-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 60px;         /* 小さめサイズ */
+  border-radius: 999px;      /* カプセル型 */
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+/* 左：黄色 */
+.mini-pill-btn--yellow {
+  background-color: #f3c94a;
+  color: #3a2616;
+}
+
+/* 右：こげ茶 */
+.mini-pill-btn--brown {
+  background-color: #3a2616;
+  color: #ffffff;
+}
+
+/* hover時の軽い浮き上がり */
+.mini-pill-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.22);
   opacity: 0.95;
 }
 
-/* 余白と行間の微調整（必要に応じて） */
-.site-footer .container {
-  /* 画像の上下感に寄せたい場合は調整 */
-  /* padding-left/rightはcontainerに任せる */
-}
-
-@media (max-width: 575.98px) {
-  .footer-brand { margin-bottom: 0.6rem; }
-  .footer-links { flex-wrap: wrap; row-gap: 0.25rem; }
-}
-
-/* 2_FV_1 */
-  #fvCarousel img {
-    display:block;width:100%;height:auto;
+/* スマホで少し間隔調整したい場合 */
+@media (max-width: 576px) {
+  .mini-cta-buttons {
+    gap: 16px;
   }
-
-
-/* 2_FV_2 */
-.FV2-section {
-  background: var(--footer-bg);
-  color: var(--footer-fg);
 }
 
-/* ボタン画像 */
-.FV2-img-btn img {
+
+/*  */
+/* ボタン2つの並びをレスポンシブ化 */
+.mini-cta-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;   /* PCは中央寄せ */
+  align-items: center;
+}
+
+/* ボタン共通（既存は活かしつつ、崩れないよう調整） */
+.mini-pill-btn{
   max-width: 100%;
-  height: auto;
-  transition: transform .1s ease, filter .2s ease;
-}
-.FV2-img-btn:hover img {
-  transform: translateY(-2px);
-  filter: brightness(1.05);
 }
 
-/* 箇条書き */
-.FV2-bullets {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-  font-size: clamp(.95rem, 2vw, 1.05rem);
-  line-height: 1.9;
-}
-.FV2-bullets li {
-  position: relative;
-  padding-left: 1.2em;
-}
-.FV2-bullets li::before {
-  content: "・";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: var(--footer-fg);
-  opacity: .95;
+/* SP：縦並び・幅100%・文字小さめ */
+@media (max-width: 767.98px){
+  .mini-cta-buttons{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .mini-pill-btn{
+    width: 100%;
+    padding: 14px 18px;      /* 横がはみ出るの防止 */
+    font-size: 18px;         /* 24pxだとSPでデカいので縮小 */
+    white-space: normal;      /* 折り返し許可（はみ出し防止） */
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+  }
 }
 
-/* 3_reason */
-.movie-feature{
-  background:#fff; /* 背景色は必要に応じて変更 */
-  color:#1b1b1b;
+/* PC：横並び・横幅は内容に合わせる（必要なら） */
+@media (min-width: 768px){
+  .mini-pill-btn{
+    width: auto;
+  }
 }
-
-/* チェック付きリスト */
-.feature-list{
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:flex;
-  flex-direction:column;
-  gap:clamp(1.2rem, 3.2vw, 2.8rem); /* 行間を画像に近づける */
-}
-
-.feature-list li{
-  position:relative;
-  padding-left: clamp(2.6rem, 4vw, 3.4rem); /* アイコン分の余白 */
-  font-family:"Shippori Mincho", serif; /* 任意 */
-  font-weight:400;
-  letter-spacing:.06em;
-  font-size: clamp(1.05rem, 2.2vw, 1.8rem); /* 大きめの本文 */
-  line-height:1.6;
-}
-
-/* アイコン（check.png）を先頭に */
-.feature-list li::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:50%;
-  transform: translateY(-50%);
-  width: clamp(1.6rem, 2.8vw, 2.2rem);
-  height: clamp(1.6rem, 2.8vw, 2.2rem);
-  background: url("check.png") no-repeat center / contain;
-  /* アイコンと文字のバランスは上のwidth/heightで調整 */
-}
-
-/* reason cta */
-.center-cta-wrap{
-  display:flex;
-  justify-content:center;
-}
-
-/* ボタン画像をdivで表示 */
-.center-cta-btn{
-  /* 横幅は画面に合わせて可変、最大は画像サイズ想定で調整 */
-  width: min(620px, 90vw);
-  /* 画像の縦横比に合わせて調整。不明ならおおよそ0.2前後でOK */
-  height: calc(min(620px, 90vw) * 0.20);
-  background: url("cta_btn_2.png") center / contain no-repeat;
-  border-radius: 16px;           /* 画像が角丸なら軽く合わせる */
-  transition: transform .08s ease, filter .2s ease;
-}
-
-.center-cta-btn2{
-  /* 横幅は画面に合わせて可変、最大は画像サイズ想定で調整 */
-  width: min(620px, 90vw);
-  /* 画像の縦横比に合わせて調整。不明ならおおよそ0.2前後でOK */
-  height: calc(min(620px, 90vw) * 0.20);
-  background: url("cta_btn_3.png") center / contain no-repeat;
-  border-radius: 16px;           /* 画像が角丸なら軽く合わせる */
-  transition: transform .08s ease, filter .2s ease;
-}
-
-/* ホバー効果（任意） */
-.center-cta-link:hover .center-cta-btn{
-  transform: translateY(-1px);
-  filter: brightness(1.05);
-}
-
-/* キーボード操作のフォーカス（任意） */
-.center-cta-link:focus-visible .center-cta-btn{
-  outline: 2px solid rgba(180, 60, 40, .7);
-  outline-offset: 3px;
-}
-
-/* コンタクト */
-
-    /* 背景：3枚をブレンドして重ねる */
-    .contact-hero {
-      position: relative;
-      color: #fff;
-      overflow: hidden;
-    }
-    .contact-hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image:
-        url("8_contact_1.png"),
-        url("8_contact_2.png"),
-        url("8_contact_3.png");
-      background-size: cover, cover, cover;
-      background-position: center, center, center;
-      background-repeat: no-repeat, no-repeat, no-repeat;
-      /* 画像のブレンド（環境により見え方が変わります） */
-      background-blend-mode: overlay, multiply, normal;
-      filter: saturate(1.1);
-      z-index: 0;
-    }
-    
-    .contact-inner {
-      position: relative;
-      z-index: 1;
-      padding-top: 72px;
-      padding-bottom: 96px;
-    }
-
-    .section-eyebrow {
-      letter-spacing: .12em;
-      font-size: .9rem;
-      opacity: .9;
-    }
-    .section-title {
-      font-size: clamp(1.6rem, 2.5vw + 1rem, 2.2rem);
-      letter-spacing: .08em;
-    }
-    .section-lead {
-      opacity: .9;
-    }
-
-    .contact-card {
-      background: #fff;
-      color: #333;
-      border-radius: var(--card-radius);
-      box-shadow: var(--card-shadow);
-      padding: 28px;
-    }
-    @media (min-width: 768px) {
-      .contact-card { padding: 40px 48px; }
-    }
-
-    /* 入力UIの微調整 */
-    .form-label { font-weight: 600; }
-    .form-control, .form-select {
-      border-radius: 10px;
-      padding: .6rem .8rem;
-    }
-    .form-check-input {
-      width: 1.1rem; height: 1.1rem;
-      margin-top: .2rem;
-    }
-    .form-hint { font-size: .9rem; color: #6c757d; }
-
-    /* 送信ボタン（赤グラデ） */
-    .btn-grad {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      background: linear-gradient(180deg, #d83a3a, #9e1515);
-      border: none;
-      color: #fff;
-      padding: .8rem 2.5rem;
-      border-radius: 999px;
-      font-weight: 700;
-      letter-spacing: .08em;
-      box-shadow: 0 10px 18px rgba(184, 31, 31, .35);
-    }
-    .btn-grad:hover { filter: brightness(1.05); }
-
-    
