@@ -288,84 +288,68 @@
         <img src="11_資料請求.png" class="img-fluid w-100 d-block" alt="">
       </picture>
 
-        <!-- フォーム -->
-        <section class="contact-section">
+      <!-- フォーム -->
+      <section class="contact-section">
             <div class="container">
-                <div class="contact-card mx-auto p-4 p-md-5">
-                <!-- <form action="https://formspree.io/f/xdkwdnyp" method="post" novalidate> -->
-                  <!-- saunahonpokohalu@gmail.comのformspree -->
-                <form action="https://formspree.io/f/mjgygdrd" method="post" novalidate>
-
-                    <div class="row g-4">
-                    <!-- お名前 -->
+              <div class="contact-card mx-auto p-4 p-md-5">
+                      <form id="contactForm" action="https://formspree.io/f/mreqwalz" method="post" novalidate>
+                  <div class="row g-4">
                     <div class="col-12 col-md-6">
-                        <label class="form-label">お名前</label>
-                        <input type="text" class="form-control" placeholder="山田　太郎">
+                      <label class="form-label">お名前</label>
+                      <input name="name" type="text" class="form-control" placeholder="山田　太郎" required>
                     </div>
 
-                    <!-- 電話番号 -->
                     <div class="col-12 col-md-6">
-                        <label class="form-label">電話番号</label>
-                        <input type="tel" class="form-control" placeholder="090-1234-5678">
+                      <label class="form-label">電話番号</label>
+                      <input name="tel" type="tel" class="form-control" placeholder="090-1234-5678">
                     </div>
 
-                    <!-- メールアドレス -->
                     <div class="col-12 col-md-6">
-                        <label class="form-label">メールアドレス</label>
-                        <input type="email" class="form-control" placeholder="example@example.com">
-                    </div>
-                    
-                    <!-- 導入場所 -->
-                    <div class="col-12 col-md-6">
-                        <label class="form-label">導入場所</label>
-                        <input type="address" class="form-control" placeholder="千葉県成田市">
+                      <label class="form-label">メールアドレス</label>
+                      <input name="email" type="email" class="form-control" placeholder="example@example.com" required>
                     </div>
 
-                    <!-- 建物タイプ -->
                     <div class="col-12 col-md-6">
-                        <label class="form-label">建物タイプ</label>
-                        <select class="form-select">
-                        <option selected>選択してください</option>
-                        <option>戸建て</option>
-                        <option>マンション</option>
-                        <option>店舗</option>
-                        <option>その他</option>
-                        </select>
+                      <label class="form-label">導入場所</label>
+                      <input name="address" type="text" class="form-control" placeholder="千葉県成田市">
                     </div>
 
-                    <!-- ご要望 -->
+                    <div class="col-12 col-md-6">
+                      <label class="form-label">建物タイプ</label>
+                      <select name="building_type" class="form-select">
+                        <option selected value="">選択してください</option>
+                        <option value="戸建て">戸建て</option>
+                        <option value="マンション">マンション</option>
+                        <option value="店舗">店舗</option>
+                        <option value="その他">その他</option>
+                      </select>
+                    </div>
+
                     <div class="col-12">
-                        <label class="form-label">ご要望・現状（任意）</label>
-                        <textarea class="form-control" rows="4"
+                      <label class="form-label">ご要望・現状（任意）</label>
+                      <textarea name="message" class="form-control" rows="4"
                         placeholder="例：〇月中に設置希望／電源容量不明／集合住宅管理規約の確認が必要 など"></textarea>
                     </div>
-                    </div>
+                  </div>
 
-                    <!-- ボタン行 -->
-                    <div class="mt-4 mt-md-5 d-flex flex-column flex-md-row gap-3">
-                    <!-- 左：無料現調 -->
-                    <button type="submit"
-                            class="btn-contact btn-contact-primary flex-fill">
-                        無料現調を申し込む →
+                  <div class="mt-4 mt-md-5 d-flex flex-column flex-md-row gap-3">
+                    <button type="submit" class="btn-contact btn-contact-primary flex-fill">
+                      無料現調を申し込む →
                     </button>
 
-                    <!-- 右：電話で相談 -->
-                    <a href="tel:09063022463"
-                        class="btn-contact btn-contact-secondary flex-fill text-center">
-                        電話で相談 →
+                    <a href="tel:09063022463" class="btn-contact btn-contact-secondary flex-fill text-center">
+                      電話で相談 →
                     </a>
-                    </div>
+                  </div>
 
-                    <!-- 注意書き -->
-                    <p class="contact-note mt-3 mb-0 small text-center text-md-start">
+                  <p id="formMsg" class="contact-note mt-3 mb-0 small text-center text-md-start">
                     ※ 送信後、担当より1営業日以内にご連絡します。
-                    </p>
-
+                  </p>
                 </form>
                 </div>
             </div>
         </section>
-
+                
     </section>
 
     <!-- フッター -->
