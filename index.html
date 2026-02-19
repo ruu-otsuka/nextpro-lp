@@ -34,7 +34,6 @@
         </a>
 
         <!-- トグル（スマホ用） -->
-         <!-- TODO -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#mainNav" aria-controls="mainNav"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +44,7 @@
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#reason">なぜサウナ本舗KOHALU？</a>
+              <a class="nav-link" href="#reason">なぜサウナ本舗KOHALU?</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#product">商材</a>
@@ -59,25 +58,35 @@
             <li class="nav-item">
               <a class="nav-link" href="#faq">FAQ</a>
             </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">お問い合わせ</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link fw-bold" href="for-company/for-company.html">法人の方はこちら</a>
+            </li> -->
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-warning fw-bold shadow-sm px-3 py-2 d-inline-flex align-items-center gap-2 text-nowrap"
+                href="for-company/for-company.html">
+                法人の方はこちら <span aria-hidden="true">→</span>
+              </a>  
+            </li>
           </ul>
-
-          <!-- お問い合わせボタン -->
-          <a href="#contact" class="btn btn-koharu ms-lg-3 mb-2 mb-lg-0">
-            お問い合わせ
-          </a>
         </div>
       </div>
     </nav>
 
     <!-- 2_FV_1 -->
      <!-- KOHALU ヒーローセクション -->
-     <!-- TODO: pcサイズを変えた時の表示崩れ、ボタンの左ずれ -->
+     <!-- <div class="hero-cta-stabilizer" aria-hidden="true"></div> -->
+
+     <!-- todo: ayanaさんに依頼、画像・文言を変更 -->
       <section class="hero-kohalu d-flex align-items-end">
         <div class="container pb-5">
-          <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
-            <a href="#contact" class="btn btn-hero-primary">
+          <div class="hero-cta-wrapper d-flex flex-column align-items-center gap-3">
+            <!-- todo: お申し込みを削除 -->
+            <!-- <a href="#contact" class="btn btn-hero-primary">
               お申し込み →
-            </a>
+            </a> -->
             <a href="#reason" class="btn btn-hero-secondary">
               1分でわかるKOHALU →
             </a>
@@ -297,11 +306,8 @@
       <section class="contact-section">
             <div class="container">
               <div class="contact-card mx-auto p-4 p-md-5">
-                <!-- @nextproのメールドメインに送信変更 -->
-                
-                  <form id="contactForm" action="https://formspree.io/f/xdkwdnyp" method="post" novalidate>
-                  <!-- <form id="contactForm" action="https://formspree.io/f/xovdgbaz" method="post" novalidate> -->
-                  <!-- <form id="contactForm" action="https://formspree.io/f/mreqwalz" method="post" novalidate> -->
+                <!-- @nextpro-lpのメールアカウント -->
+                 <form id="contactForm" action="https://formspree.io/f/xdkwdnyp" method="post" novalidate>
                   <div class="row g-4">
                     <div class="col-12 col-md-6">
                       <label class="form-label">お名前</label>
@@ -342,13 +348,15 @@
                   </div>
 
                   <div class="mt-4 mt-md-5 d-flex flex-column flex-md-row gap-3">
-                    <button type="submit" class="btn-contact btn-contact-primary flex-fill">
-                      お申し込み →
+                    <button type="submit" class="btn-contact btn-contact-secondary flex-fill">
+                      <!-- todo: お申し込みから無料相談・お申し込みに変更 -->
+                      無料相談・お申し込み →
                     </button>
 
-                    <a href="tel:09063022463" class="btn-contact btn-contact-secondary flex-fill text-center">
+                    <a href="tel:09063022463" class="btn-contact btn-contact-primary flex-fill text-center">
                       電話で相談 →
                     </a>
+
                   </div>
 
                   <p id="formMsg" class="contact-note mt-3 mb-0 small text-center text-md-start">
@@ -384,32 +392,38 @@
     </footer>
 
     <!-- スティッキーバナー -->
-    <section class="sticky-cta py-3">
-        <div class="container">
-            <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-            <!-- 左：電話ボタン -->
-            <a href="tel:09063022463"
-                class="btn-cta btn-cta-phone d-flex align-items-center justify-content-center flex-fill">
-                <span class="me-2">📞</span>
-                <div class="text-center">
-                <div class="small fw-bold">お電話で問い合わせ</div>
-                <div class="fs-5 fw-bold">090-6302-2463</div>
-                </div>
-            </a>
+     <!-- todo: 横並びにする、色をコンタクトと揃える -->
+      <!-- スティッキーバナー -->
+<!-- todo: 横並びにする、色をコンタクトと揃える -->
 
-            <!-- 右：資料請求ボタン -->
-            <a href="#contact"
-                class="btn-cta btn-cta-doc d-flex align-items-center justify-content-center flex-fill">
-                <span class="fw-bold">資料請求はこちら</span>
-                <span class="ms-2">→</span>
-            </a>
-            </div>
+<section class="position-fixed bottom-0 start-0 end-0 z-3 shadow">
+  <div class="container-fluid px-0">
+    <div class="d-flex w-100">
+
+      <!-- 左：電話 -->
+      <a href="tel:09063022463"
+         class="flex-fill text-decoration-none">
+        <div class="btn-contact btn-contact-primary rounded-0 w-100 h-100 d-flex align-items-center justify-content-center text-center py-3">
+          <div class="small fw-bold">お電話で問い合わせ</div>
         </div>
-    </section>
+      </a>
+
+      <!-- 右：資料請求 -->
+      <a href="#contact"
+         class="flex-fill text-decoration-none">
+        <div class="btn-contact btn-contact-secondary rounded-0 w-100 h-100 d-flex align-items-center justify-content-center text-center py-3 border-start border-white border-opacity-50">
+          <span class="fw-bold">資料請求・無料相談</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
   </main>
 
 
-  
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
