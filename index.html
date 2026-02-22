@@ -302,7 +302,10 @@
             <div class="container">
               <div class="contact-card mx-auto p-4 p-md-5">
                 <!-- @nextpro-lpのメールアカウント -->
-                 <form id="contactForm" action="https://formspree.io/f/xdkwdnyp" method="post" novalidate>
+                 <!-- <form id="contactForm" action="https://formspree.io/f/xdkwdnyp" method="post" novalidate> -->
+
+                  <!-- saunahonpokoharu@gmail.comテスト action2 -->
+                 <form id="contactForm" action="https://formspree.io/f/mreqwalz" data-action2="https://formspree.io/f/mjgygdrd" method="post" novalidate>
                   <div class="row g-4">
                     <div class="col-12 col-md-6">
                       <label class="form-label">お名前</label>
@@ -353,9 +356,11 @@
                     </a>
 
                   </div>
-
-                  <p id="formMsg" class="contact-note mt-3 mb-0 small text-center text-md-start">
+                  <p class="contact-note mt-3 mb-0 small text-center text-md-start">
                     ※ 送信後、担当より1営業日以内にご連絡します。
+                  </p>
+                  <!-- 送信ステータスのメッセージ -->
+                  <p id="formMsg" class="contact-note mt-3 mb-0 small text-center text-md-start" style="color: red;">
                   </p>
                 </form>
                 </div>
@@ -414,9 +419,47 @@
     </div>
   </div>
 </section>
-
-
   </main>
+
+  <!-- @nextproとsaunahonpokoharu@gmail.comの2つのformspreeに送信 -->
+  <script>
+  const form = document.getElementById("contactForm");
+  const msg  = document.getElementById("formMsg");
+
+  function cloneFormData(fd) {
+    const copy = new FormData();
+    for (const [k, v] of fd.entries()) copy.append(k, v);
+    return copy;
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const endpoints = [form.action, form.dataset.action2].filter(Boolean);
+    const fd = new FormData(form);
+
+    msg.textContent = "送信中…";
+
+    try {
+      await Promise.all(
+        endpoints.map((url) =>
+          fetch(url, {
+            method: "POST",
+            body: cloneFormData(fd),
+            headers: { "Accept": "application/json" }
+          })
+        )
+      );
+
+      form.reset();
+      msg.textContent = "送信しました。担当よりご連絡します。";
+    } catch (err) {
+      msg.textContent = "送信に失敗しました。時間をおいて再度お試しください。";
+      console.error(err);
+    }
+  });
+</script>
+
 
 
   <!-- Bootstrap JS -->
