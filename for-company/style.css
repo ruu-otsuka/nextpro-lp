@@ -14,6 +14,7 @@
 body {
   font-family: "Shippori Mincho", serif;
   padding-top: 64px;
+  padding-bottom: 88px;
   background: #000;
 }
 .navbar{
@@ -188,6 +189,43 @@ body {
   opacity: .95;
 }
 
+.cta-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .18);
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  transform: translateY(-1px);
+  opacity: .96;
+}
+
+.cta-button-primary {
+  background: #f0c14b;
+  color: #2a1d12;
+}
+
+.cta-button-secondary {
+  background: #7a1f1f;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .15);
+}
+
 /* 3_reason */
 .movie-feature{
   background:#fff; /* 背景色は必要に応じて変更 */
@@ -266,6 +304,18 @@ body {
   outline-offset: 3px;
 }
 
+.section-cta-band {
+  background: #3c3220;
+  padding: 48px 0;
+}
+
+.section-cta-copy {
+  color: #fff;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
 /* コンタクト */
 
     /* 背景：3枚をブレンドして重ねる */
@@ -311,6 +361,11 @@ body {
       opacity: .9;
     }
 
+    .contact-required-note {
+      font-size: .95rem;
+      opacity: .95;
+    }
+
     .contact-card {
       background: #fff;
       color: #333;
@@ -332,6 +387,10 @@ body {
       width: 1.1rem; height: 1.1rem;
       margin-top: .2rem;
     }
+    .required-badge {
+      color: var(--accent);
+      font-weight: 700;
+    }
     .form-hint { font-size: .9rem; color: #6c757d; }
 
     /* 送信ボタン（赤グラデ） */
@@ -349,5 +408,62 @@ body {
       box-shadow: 0 10px 18px rgba(184, 31, 31, .35);
     }
     .btn-grad:hover { filter: brightness(1.05); }
+
+.sticky-cta-company {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1030;
+  padding: 0;
+}
+
+.sticky-cta-inner {
+  display: flex;
+  width: 100%;
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, .18);
+}
+
+.sticky-cta-link {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  padding: 0.9rem 1rem;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.sticky-cta-link-phone {
+  background: #f0c14b;
+  color: #2a1d12;
+}
+
+.sticky-cta-link-contact {
+  background: #7a1f1f;
+  color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  body {
+    padding-bottom: 132px;
+  }
+
+  .cta-button-group {
+    flex-direction: column;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+
+  .sticky-cta-link {
+    min-height: 56px;
+    padding: 0.8rem 0.5rem;
+    font-size: 0.95rem;
+  }
+}
 
     

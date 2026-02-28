@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="ja">
 <head>
+  <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-T3J2JLL5');
+    </script>
+  <!-- End Google Tag Manager -->
+   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="referrer" content="origin-when-cross-origin">
@@ -73,15 +83,9 @@
     <!-- 2_FV_1 -->
      <!-- KOHALU ヒーローセクション -->
      <!-- <div class="hero-cta-stabilizer" aria-hidden="true"></div> -->
-
-     <!-- todo: ayanaさんに依頼、画像・文言を変更 -->
       <section class="hero-kohalu d-flex align-items-end">
         <div class="container pb-5">
           <div class="hero-cta-wrapper d-flex flex-column align-items-center gap-3">
-            <!-- todo: お申し込みを削除 -->
-            <!-- <a href="#contact" class="btn btn-hero-primary">
-              お申し込み →
-            </a> -->
             <a href="#reason" class="btn btn-hero-secondary">
               1分でわかるKOHALU →
             </a>
@@ -92,16 +96,16 @@
     <!-- 2_FV_2 -->
     <section class="FV2-section">
         <!-- スマホサイズなし -->
-        <img src="2_FV_2.png" class="img-fluid w-100 d-block" alt="">
+        <img src="2_FV_2.webp" class="img-fluid w-100 d-block" alt="" loading="lazy">
     </section>
 
     <!-- 3_point -->
     <section class="FV2-section">
       <picture>
         <!-- スマホ用 -->
-        <source srcset="3_point_1_sp.png" media="(max-width: 767.98px)">
+        <source srcset="3_point_1_sp.webp" media="(max-width: 767.98px)">
         <!-- PC・タブレット用 -->
-        <img src="3_point_1.jpg" class="img-fluid w-100 d-block" alt="">
+        <img src="3_point_1.webp" class="img-fluid w-100 d-block" alt="" loading="lazy">
       </picture>
     </section>
 
@@ -113,13 +117,13 @@
 
           <!-- =======================
               PC（md以上）
-              1段目：3_reason_1.png
-              2段目：YouTube(左) / 3_reason_2.png(右)
+              1段目：3_reason_1.webp
+              2段目：YouTube(左) / 3_reason_2.webp(右)
           ======================== -->
           <div class="d-none d-md-block">
             <!-- 1段目 -->
             <div class="mb-4">
-              <img src="3_reason_1.png" class="img-fluid w-100" alt="理由画像1" loading="lazy">
+              <img src="3_reason_1.webp" class="img-fluid w-100" alt="理由画像1" loading="lazy">
             </div>
 
             <!-- 2段目 -->
@@ -143,21 +147,21 @@
               </div>
               </div>
               <div class="col-md-6">
-                <img src="3_reason_2.png" class="img-fluid w-100" alt="理由画像2" loading="lazy">
+                <img src="3_reason_2.webp" class="img-fluid w-100" alt="理由画像2" loading="lazy">
               </div>
             </div>
           </div>
 
           <!-- =======================
               SP（md未満）
-              1段目：3_reason_2_sp.png
+              1段目：3_reason_2_sp.webp
               2段目：YouTube
-              3段目：3_reason_3_sp.png
+              3段目：3_reason_3_sp.webp
           ======================== -->
           <div class="d-block d-md-none">
             <!-- 1段目 -->
             <div class="mb-3">
-              <img src="3_reason_2_sp.png" class="img-fluid w-100" alt="理由SP画像1" loading="lazy">
+              <img src="3_reason_2_sp.webp" class="img-fluid w-100" alt="理由SP画像1" loading="lazy">
             </div>
 
             <!-- 2段目 -->
@@ -174,29 +178,77 @@
 
             <!-- 3段目 -->
             <div>
-              <img src="3_reason_3_sp.png" class="img-fluid w-100" alt="理由SP画像2" loading="lazy">
+              <img src="3_reason_3_sp.webp" class="img-fluid w-100" alt="理由SP画像2" loading="lazy">
             </div>
           </div>
 
         </div>
       </section>
 
+
+    <!-- 室内・マンション設置の相談も可能です -->
+    <section class="detail-boost-section py-5">
+      <div class="container">
+        <div class="row g-4 align-items-center mb-4">
+          <div class="col-lg-6">
+            <!-- <picture>
+              <source srcset="4_lineup_1_sp.webp" media="(max-width: 767.98px)">
+              <img src="4_lineup_1.webp" class="img-fluid w-100 detail-boost-image" alt="室内向けサウナの設置イメージ" loading="lazy">
+            </picture> -->
+            <img src="室内マンションにも設置可能.webp" class="img-fluid w-75 h-50 detail-boost-image" alt="">
+          </div>
+          <div class="col-lg-6">
+            <div class="detail-boost-copy">
+              <p class="detail-boost-eyebrow">INDOOR / CONDOMINIUM</p>
+              <h2 class="detail-boost-title">室内・マンション設置の相談も可能です</h2>
+              <p class="detail-boost-text">屋内設置や集合住宅での導入は、搬入動線、換気、電源、管理規約の確認が重要です。KOHALUでは現地条件を整理しながら、無理のない導入可否を一緒に確認します。</p>
+              <ul class="detail-check-list">
+                <li>マンションの専有部、別荘、離れなどの屋内計画に対応</li>
+                <li>搬入経路、床荷重、換気計画の確認ポイントを事前に整理</li>
+                <li>電気式中心に、設置環境に合わせて現実的な仕様をご提案</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="detail-note-card h-100">
+              <h3 class="detail-note-title">室内向けの確認事項</h3>
+              <p class="detail-note-text mb-0">換気経路、扉サイズ、電源容量、防水範囲など、屋外設置と異なる確認点を事前に整理します。</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="detail-note-card h-100">
+              <h3 class="detail-note-title">マンション導入の進め方</h3>
+              <p class="detail-note-text mb-0">管理規約や近隣配慮が必要なケースでも、必要な確認項目を洗い出しながら導入判断を進められます。</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="detail-note-card h-100">
+              <h3 class="detail-note-title">まずは無料相談</h3>
+              <p class="detail-note-text mb-0">図面や設置予定場所の写真があれば、初回相談をより具体的に進められます。未確定でも問題ありません。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     
     <!--「商材ラインナップ」  -->
-    <!-- 4_lineup.jpg -->
-    <section class="img-block" id="product">
-        <!-- <picture>
-            <source srcset="4_lineup_sp.png" media="(max-width: 768px)">
-            <img src="4_lineup.png" alt="製品ラインナップ" loading="lazy">
-        </picture> -->
+    <!-- 4_lineup.webp -->
+    <section class="img-block text-center" id="product">
+        <div class="mx-5 my-5">
+          <img src="商品ラインナップ.webp" class="w-25 h-25" alt="">
+          <p class="mt-3 mb-5">用途や敷地条件に合わせてお選びいただけます。</p>
+        </div>
 
-        <!-- バレルサウナ 屋内用 -->
+        <!-- バレルサウナ 屋外用1 -->
         <picture>
-            <source srcset="4_lineup_1_sp.png" media="(max-width: 767.98px)">
-            <img src="4_lineup_1.png" class="img-fluid w-100 d-block" alt="">
+            <source srcset="商品ラインナップ_バレルサウナ_1_sp.webp" media="(max-width: 767.98px)">
+            <img src="商品ラインナップ_バレルサウナ1.webp" class="img-fluid w-75 h-75 d-block mx-auto mt-3" alt="">
         </picture>
         <!-- ボタンエリア -->
-        <div class="mini-cta-buttons">
+        <div class="mini-cta-buttons mt-3 mb-5 mx-3">
           <a href="#contact" class="mini-pill-btn mini-pill-btn--yellow">
             このタイプで相談 →
           </a>
@@ -204,15 +256,13 @@
             設置イメージを見る →
           </a>
         </div>
-
-
-        <!-- バレルサウナ 屋外用 -->
+        <!-- バレルサウナ 屋外用2 -->
         <picture>
-            <source srcset="4_lineup_2_sp.png" media="(max-width: 767.98px)">
-            <img src="4_lineup_2.png" class="img-fluid w-100 d-block" alt="">
-        </picture>
+            <source srcset="商品ラインナップ_バレルサウナ_2_sp.webp" media="(max-width: 767.98px)">
+            <img src="商品ラインナップ_バレルサウナ2.webp" class="img-fluid w-75 h-75 d-block mx-auto mt-3" alt="">
+          </picture>
         <!-- ボタンエリア -->
-        <div class="mini-cta-buttons">
+        <div class="mini-cta-buttons mt-3 mb-5 mx-3">
           <a href="#contact" class="mini-pill-btn mini-pill-btn--yellow">
             このタイプで相談 →
           </a>
@@ -220,28 +270,75 @@
             設置イメージを見る →
           </a>
         </div>
-
+        
+        <!-- バレルサウナ 屋内用1 -->
+        <picture>
+            <source srcset="商品ラインナップ_CUBEサウナ_1_sp.webp" media="(max-width: 767.98px)">
+            <img src="商品ラインナップ_CUBEサウナ1.webp" class="img-fluid w-75 h-75 d-block mx-auto mt-3" alt="">
+        </picture>
+        <!-- ボタンエリア -->
+        <div class="mini-cta-buttons mt-3 mb-5 mx-3">
+          <a href="#contact" class="mini-pill-btn mini-pill-btn--yellow">
+            このタイプで相談 →
+          </a>
+          <a href="#image" class="mini-pill-btn mini-pill-btn--brown">
+            設置イメージを見る →
+          </a>
+        </div>
+        <!-- バレルサウナ 屋内用2 -->
+        <picture>
+            <source srcset="商品ラインナップ_CUBEサウナ_2_sp.webp" media="(max-width: 767.98px)">
+            <img src="商品ラインナップ_バレルサウナ2.webp" class="img-fluid w-75 h-75 d-block mx-auto mt-3" alt="">
+        </picture>
+        <!-- ボタンエリア -->
+        <div class="mini-cta-buttons mt-3 mb-5 mx-3">
+          <a href="#contact" class="mini-pill-btn mini-pill-btn--yellow">
+            このタイプで相談 →
+          </a>
+          <a href="#image" class="mini-pill-btn mini-pill-btn--brown">
+            設置イメージを見る →
+          </a>
+        </div>
         
         <!-- 水風呂 -->
         <picture>
-            <source srcset="4_lineup_4_sp.png" media="(max-width: 767.98px)">
-            <img src="4_lineup_4.png" class="img-fluid w-100 d-block" alt="">
+            <source srcset="4_lineup_4_sp.webp" media="(max-width: 767.98px)">
+            <img src="4_lineup_4.webp" class="img-fluid w-100 d-block" alt="">
         </picture>
+    </section>
 
+    <section class="price-banner-section py-5">
+      <div class="container">
+        <div class="price-banner-card text-center">
+          <p class="price-banner-label mb-2">PRICE</p>
+          <h2 class="price-banner-title mb-3">798,000円~</h2>
+          <p class="price-banner-copy mb-0">CUBEサウナ最小構成でのご案内価格です。仕様、搬入条件、設置環境に応じて個別にお見積もりします。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9_設置イメージ -->
+    <section id="image" class="FV2-section">
+      <picture>
+        <!-- スマホ用 -->
+        <source srcset="9_設置イメージ_sp.webp" media="(max-width: 767.98px)">
+        <!-- PC・タブレット用 -->
+        <img src="9_設置イメージ.webp" class="img-fluid w-100 d-block" alt="">
+      </picture>
     </section>
     
      <!-- 6_配送・設置について -->
     <section id="delivery" class="FV2-section py-5">
       <!-- PC / タブレット：2枚構成 -->
       <div class="d-none d-md-block">
-        <img src="6_配送と設置.png" class="img-fluid w-100 d-block" alt="">
-        <img src="6_tel.png" class="img-fluid w-100 d-block" alt="">
+        <img src="6_配送と設置.webp" class="img-fluid w-100 d-block" alt="">
+        <img src="6_tel.webp" class="img-fluid w-100 d-block" alt="">
       </div>
 
       <!-- スマホ：sp版1枚 -->
       <picture class="d-block d-md-none">
-        <source srcset="6_配送と設置_sp.png" media="(max-width: 767.98px)">
-        <img src="6_配送と設置_sp.png" class="img-fluid w-100 d-block" alt="">
+        <source srcset="6_配送と設置_sp.webp" media="(max-width: 767.98px)">
+        <img src="6_配送と設置_sp.webp" class="img-fluid w-100 d-block" alt="">
       </picture>
     </section>
 
@@ -250,9 +347,9 @@
     <section class="FV2-section py-5">
       <picture>
         <!-- スマホ用（sp版があるならここを差し替え） -->
-        <source srcset="7_設置の不安_sp.png" media="(max-width: 767.98px)">
+        <source srcset="7_設置の不安_sp.webp" media="(max-width: 767.98px)">
         <!-- PC・タブレット用 -->
-        <img src="7_設置の不安.png" class="img-fluid w-100 d-block" alt="">
+        <img src="7_設置の不安.webp" class="img-fluid w-100 d-block" alt="">
       </picture>
     </section>
 
@@ -261,40 +358,28 @@
     <section class="FV2-section">
       <picture>
         <!-- スマホ用 -->
-        <source srcset="8_品質_sp.png" media="(max-width: 767.98px)">
+        <source srcset="8_品質_sp.webp" media="(max-width: 767.98px)">
         <!-- PC・タブレット用 -->
-        <img src="8_品質.png" class="img-fluid w-100 d-block" alt="">
+        <img src="8_品質.webp" class="img-fluid w-100 d-block" alt="">
       </picture>
     </section>
-
-
-    <!-- 9_設置イメージ -->
-    <section id="image" class="FV2-section">
-      <picture>
-        <!-- スマホ用 -->
-        <source srcset="9_設置イメージ_sp.png" media="(max-width: 767.98px)">
-        <!-- PC・タブレット用 -->
-        <img src="9_設置イメージ.png" class="img-fluid w-100 d-block" alt="">
-      </picture>
-    </section>
-
 
     <!-- 10_よくある質問 -->
     <section id="faq" class="FV2-section">
       <picture>
         <!-- スマホ用 -->
-        <source srcset="10_よくある質問_sp.png" media="(max-width: 767.98px)">
+        <source srcset="10_よくある質問_sp.webp" media="(max-width: 767.98px)">
         <!-- PC・タブレット用 -->
-        <img src="10_よくある質問.png" class="img-fluid w-100 d-block" alt="">
+        <img src="10_よくある質問.webp" class="img-fluid w-100 d-block" alt="">
       </picture>
     </section>
     <!-- 11_資料請求 -->
     <section id="contact" class="FV2-section">
       <picture>
         <!-- スマホ用 -->
-        <source srcset="11_資料請求_sp.png" media="(max-width: 767.98px)">
+        <source srcset="11_資料請求_sp.webp" media="(max-width: 767.98px)">
         <!-- PC・タブレット用 -->
-        <img src="11_資料請求.png" class="img-fluid w-100 d-block" alt="">
+        <img src="11_資料請求.webp" class="img-fluid w-100 d-block" alt="">
       </picture>
 
       <!-- フォーム -->
@@ -307,7 +392,7 @@
                   <!-- saunahonpokoharu@gmail.comテスト action2 -->
                   <!-- @nextpro-lpのメールアカウント xdkwdnyp -->
                  <form id="contactForm" action="https://formspree.io/f/xdkwdnyp" data-action2="https://formspree.io/f/mjgygdrd" method="post" novalidate>
-                  <div class="row g-4">
+                 <div class="row g-4">
                     <div class="col-12 col-md-6">
                       <label class="form-label">お名前</label>
                       <input name="name" type="text" class="form-control" placeholder="山田　太郎" required>
@@ -324,18 +409,14 @@
                     </div>
 
                     <div class="col-12 col-md-6">
-                      <label class="form-label">導入場所</label>
-                      <input name="address" type="text" class="form-control" placeholder="千葉県成田市">
-                    </div>
-
-                    <div class="col-12 col-md-6">
-                      <label class="form-label">建物タイプ</label>
-                      <select name="building_type" class="form-select">
+                      <label class="form-label">気になっているサウナ</label>
+                      <select name="interested_sauna" class="form-select">
                         <option selected value="">選択してください</option>
-                        <option value="戸建て">戸建て</option>
-                        <option value="マンション">マンション</option>
-                        <option value="店舗">店舗</option>
-                        <option value="その他">その他</option>
+                        <option value="バレルサウナ 屋内用">バレルサウナ 屋内用</option>
+                        <option value="バレルサウナ 屋外用">バレルサウナ 屋外用</option>
+                        <option value="水風呂">水風呂</option>
+                        <option value="室内・マンション向け相談">室内・マンション向け相談</option>
+                        <option value="まだ決まっていない">まだ決まっていない</option>
                       </select>
                     </div>
 
@@ -380,6 +461,7 @@
             <p class="footer-lead mb-2">
               配送から設置までワンストップ。まずは無料現調からお気軽にご相談ください。
             </p>
+            <p class="footer-address mb-2">〒243-0427 神奈川県海老名市杉久保南4-2-1</p>
             <small class="footer-copy">©Sauna Honpo KOHALU</small>
           </div>
         </div>
@@ -485,4 +567,8 @@
     <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=8354436&fmt=gif" />
   </noscript>
 </body>
+<!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3J2JLL5"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 </html>
